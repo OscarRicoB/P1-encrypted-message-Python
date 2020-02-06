@@ -29,7 +29,7 @@ if f.mode == "r":
         sys.exit("Error: The four line containing the message can only contain characters that fits the regex ["
                  "a-zA-Z0-9]")
     nfl4 = re.sub(r"(.)\1+", r"\1", fl4)
-    if int(fl1Arr[2]) == int(len(nfl4.strip())):
+    if int(fl1Arr[2]) == int(len(fl4.strip())):
         responses = ("No", "Si")
         f = open(output_file, "w+")
         f.write(responses[fl2.strip() in nfl4.strip()]+"\n")
